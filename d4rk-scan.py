@@ -2,31 +2,6 @@ import urllib
 from socket import *
 import time
 import subprocess
-def ip_locate():
-    logo = """
-             _/  _/  _/              _/      
-        _/_/_/  _/  _/    _/  _/_/  _/  _/   
-     _/    _/  _/_/_/_/  _/_/      _/_/      
-    _/    _/      _/    _/        _/  _/     
-     _/_/_/      _/    _/        _/    _/    
-
-
-
-
-         _/_/_/    _/_/_/    _/_/_/  _/_/_/    _/_/_/      _/_/    _/  _/_/   
-      _/_/      _/        _/    _/  _/    _/  _/    _/  _/_/_/_/  _/_/        
-         _/_/  _/        _/    _/  _/    _/  _/    _/  _/        _/           
-    _/_/_/      _/_/_/    _/_/_/  _/    _/  _/    _/    _/_/_/  _/            
-
-                                                                  ~* by Mr-D4r|<
-
-                               {ip locater}                                     """
-    print(logo)
-
-    ip = input("*Enter ip address:*:")
-    response = urllib.urlopen("http://api.hostip.info/get_html.php?ip={}&position=true".format(ip)).read()
-
-    print(response)
 def ipscan():
     logo = """
              _/  _/  _/              _/      
@@ -116,14 +91,12 @@ print("=========================================================================
 print("                             ~~ D4RK SCAN ~~                              ")
 print("==========================================================================")
 print("         1 ==> IP SCAN                                                    ")
-print("         2 ==> IP LOCATE                                                  ")
-print("         3 ==> YOUR RANGE ACTIVE DEVICE                                   ")
+print("                                                                          ")
+print("         2 ==> YOUR RANGE ACTIVE DEVICE                                   ")
 print("==========================================================================")
 opt = int(input("*Enter your option:*:"))
 if opt == 1 :
     ipscan()
 if opt == 2 :
-    ip_locate()
-if opt == 3 :
     mrad()
 else : print("invalid option")
